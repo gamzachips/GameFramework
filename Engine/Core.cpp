@@ -9,10 +9,12 @@ void Core::Initialize(std::unique_ptr<Game> _game)
 
 void Core::Update()
 {
+	game->Update();
 }
 
 void Core::Render()
 {
+	game->Render();
 }
 
 void Core::Destroy()
