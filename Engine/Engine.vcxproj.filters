@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\1.Core">
+      <UniqueIdentifier>{e067466e-7f9a-43dc-bb0c-f2cfeac8490e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\2.Window">
+      <UniqueIdentifier>{a6c75779-164e-4a5a-bad0-b99c66be6875}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\0.Engine">
+      <UniqueIdentifier>{d217db14-8703-43d7-b133-560d05db3ed2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\99.Headers">
+      <UniqueIdentifier>{b87cadd1-f0fb-48ae-8489-88fdae37288c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\1.Core\World">
+      <UniqueIdentifier>{5be9e670-3f08-47d4-ad8c-471b7459f562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\1.Core\Object">
+      <UniqueIdentifier>{946b8174-b042-4d49-a7a0-07108f2b3a48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\1.Core\Game">
+      <UniqueIdentifier>{3281040f-5cbf-46cf-8869-9df7bdd887b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine.h">
+      <Filter>소스 파일\0.Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>소스 파일\2.Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.h">
+      <Filter>소스 파일\1.Core</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>소스 파일\99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>소스 파일\99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>소스 파일\1.Core\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>소스 파일\1.Core\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>소스 파일\1.Core\Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine.cpp">
+      <Filter>소스 파일\0.Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>소스 파일\2.Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Core.cpp">
+      <Filter>소스 파일\1.Core</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일\99.Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>소스 파일\1.Core\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>소스 파일\1.Core\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>소스 파일\1.Core\Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
