@@ -23,19 +23,19 @@ void World::Update()
 {
 	for (const auto& object : objects)
 	{
-		if(object->GetIsActive())
+		if(object->IsActive())
 			object->Update();
 	}
 
 	for (const auto& object : objects)
 	{
-		if (object->GetIsActive())
+		if (object->IsActive())
 			object->FixedUpdate();
 	}
 
 	for (const auto& object : objects)
 	{
-		if (object->GetIsActive())
+		if (object->IsActive())
 			object->LateUpdate();
 	}
 
@@ -59,7 +59,7 @@ void World::Render()
 
 	for (const auto& object : objects)
 	{
-		if (object->GetIsActive())
+		if (object->IsActive())
 			object->Render();
 	}
 }

@@ -1,6 +1,7 @@
 #pragma once
 class Component
 {
+	friend class Object;
 public:
 	virtual void Awake();
 	virtual void Init();
@@ -15,6 +16,6 @@ public:
 
 private:
 	bool enabled = true;
-
+	Object* gameObject = nullptr;
 };
 
