@@ -2,6 +2,8 @@
 #include "Engine.h"
 #include "Game.h"
 
+Game* GGame = nullptr;
+
 bool Engine::Initialize(const WindowDesc& _desc, std::unique_ptr<Game> _game)
 {
 	window = std::make_unique<Window>(_desc);
@@ -9,6 +11,9 @@ bool Engine::Initialize(const WindowDesc& _desc, std::unique_ptr<Game> _game)
 	if (!window->Initialize())
 		return false;
 	core->Initialize(std::move(_game));
+
+	GGame = _game.get();
+
 	return true;
 }
 

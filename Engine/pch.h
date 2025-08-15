@@ -11,7 +11,24 @@
 #include <memory>
 #include <vector>
 #include "framework.h"
+#include <d2d1.h>
+#include <d2d1_1.h>
+#include <d2d1helper.h>
+#include <d2d1_1helper.h>
+#include <dwrite.h>
+#include <wincodec.h>
+#include <wrl/client.h>
 
 
+#define HR(x)		\
+{					\
+	HRESULT hr = (x); \
+	if(FAILED(hr))\
+	{\
+		OutputDebugStringA("HR FAILED :" #x "\n");\
+	}\
+}
+
+using Microsoft::WRL::ComPtr;
 
 #endif //PCH_H

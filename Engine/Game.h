@@ -4,16 +4,25 @@
 #include <unordered_map>
 #include <string>
 
+class TimeManager;
+class InputManager;
+class ResourceManager;
+class Renderer;
+
 class Game
 {
 	friend class Core;
 public:
 	Game();
-	virtual ~Game() = default;
+	virtual ~Game();
 
 	World* CreateWorld(std::string _name);
 	void SetWorld(std::string _name);
 	void DontDestroyOnLoad(Object* _object);
+
+	const TimeManager* GetTimeManager() const { return timeManager.get(); }
+	const InputManager* GetInputManager() const { return inputManager.get(); }
+	const Renderer* GetRenderer() const { return renderer.get(); }
 
 private:
 	void Init();
@@ -28,5 +37,10 @@ private:
 
 	World* nowWorld = nullptr;
 	World* nextWorld = nullptr;
+
+	std::unique_ptr<TimeManager> timeManager;
+	std::unique_ptr<InputManager> inputManager;
+	std::unique_ptr<ResourceManager> resourceManager;
+	std::unique_ptr<Renderer> renderer;
 };
 

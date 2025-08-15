@@ -1,10 +1,21 @@
 #include "pch.h"
 #include "Game.h"
-
+#include "TimeManager.h"
+#include "InputManager.h"
+#include "ResourceManager.h"
+#include "Renderer.h"
 
 Game::Game()
 {
 	persistentWorld = std::make_unique<World>();
+	timeManager = std::make_unique<TimeManager>();
+	inputManager = std::make_unique<InputManager>();
+	resourceManager = std::make_unique<ResourceManager>();
+	renderer = std::make_unique<Renderer>();
+}
+
+Game::~Game()
+{
 }
 
 World* Game::CreateWorld(std::string _name)
@@ -26,6 +37,8 @@ void Game::DontDestroyOnLoad(Object* _object)
 
 void Game::Init()
 {
+	timeManager->Init();
+
 	if(nowWorld)
 		nowWorld->Init();
 	persistentWorld->Init();
@@ -34,6 +47,9 @@ void Game::Init()
 
 void Game::Update()
 {
+	timeManager->Update();
+	inputManager->Update();
+
 	if (nowWorld)
 		nowWorld->Update();
 	persistentWorld->Update();

@@ -33,6 +33,21 @@
     <Filter Include="소스 파일\1.Core\Component">
       <UniqueIdentifier>{b0f1f309-290a-4b27-97c9-61a09dbc1280}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\1.Core\Game\Managers">
+      <UniqueIdentifier>{ce9b2809-caf4-48f6-9832-5791414a2c31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\1.Core\Resource">
+      <UniqueIdentifier>{a0351214-0a94-4b00-9b0c-bf99b57af406}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\1.Core\Resource\Texture">
+      <UniqueIdentifier>{bec0853e-b66a-4be6-9622-beb737d5b323}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\4.Utils">
+      <UniqueIdentifier>{be073610-f8d5-496d-8da0-5fd35f647f81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\1.Core\Render">
+      <UniqueIdentifier>{2fe48680-c41f-47ec-b2c9-0bd523255055}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -62,6 +77,30 @@
     <ClInclude Include="Component.h">
       <Filter>소스 파일\1.Core\Component</Filter>
     </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>소스 파일\1.Core\Game\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>소스 파일\1.Core\Game\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>소스 파일\1.Core\Game\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>소스 파일\1.Core\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>소스 파일\1.Core\Resource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>소스 파일\1.Core\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>소스 파일\4.Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Handle.h">
+      <Filter>소스 파일\1.Core\Resource</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -87,6 +126,30 @@
     </ClCompile>
     <ClCompile Include="Component.cpp">
       <Filter>소스 파일\1.Core\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>소스 파일\1.Core\Game\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>소스 파일\1.Core\Game\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>소스 파일\1.Core\Game\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource.cpp">
+      <Filter>소스 파일\1.Core\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>소스 파일\1.Core\Resource\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>소스 파일\1.Core\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>소스 파일\4.Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Handle.cpp">
+      <Filter>소스 파일\1.Core\Resource</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

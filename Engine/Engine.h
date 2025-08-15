@@ -5,6 +5,8 @@
 
 class Game;
 
+extern Game* GGame;
+
 class Engine
 {
 public:

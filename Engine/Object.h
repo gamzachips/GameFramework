@@ -30,6 +30,8 @@ public:
 	template<ComponentType T>
 	T* GetComponent();
 
+	//TODO : RemoveComponent
+
 private:
 	template<ComponentType T>
 	size_t GetComponentTypeID();

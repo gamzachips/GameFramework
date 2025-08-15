@@ -3,6 +3,7 @@
 class MyGame : public Game
 {
 public:
-	virtual ~MyGame() = default;
+	MyGame();
+	virtual ~MyGame();
 };
 
