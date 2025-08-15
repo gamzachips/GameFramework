@@ -20,8 +20,10 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     desc.title = L"대환장 게임즈 2.0";
     desc.windowClass = L"BugFixPlz";
     
-    if (!engine.Initialize(desc, std::make_unique<MyGame>()))
+    if (!engine.Initialize(desc))
         return -1;
+
+    engine.SetGame(std::move(std::make_unique<MyGame>()));
 
     engine.Run();
 

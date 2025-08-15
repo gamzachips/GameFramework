@@ -12,6 +12,10 @@ Game::Game()
 	inputManager = std::make_unique<InputManager>();
 	resourceManager = std::make_unique<ResourceManager>();
 	renderer = std::make_unique<Renderer>();
+
+	timeManager->Init();
+	resourceManager->Init();
+	renderer->Init();
 }
 
 Game::~Game()
@@ -37,12 +41,9 @@ void Game::DontDestroyOnLoad(Object* _object)
 
 void Game::Init()
 {
-	timeManager->Init();
-
-	if(nowWorld)
+	if (nowWorld)
 		nowWorld->Init();
 	persistentWorld->Init();
-
 }
 
 void Game::Update()
@@ -60,9 +61,12 @@ void Game::Update()
 
 void Game::Render()
 {
+	renderer->GetRenderTarget().Get()->BeginDraw();
 	if (nowWorld)
 		nowWorld->Render();
 	persistentWorld->Render();
+	renderer->GetRenderTarget().Get()->EndDraw();
+
 }
 
 void Game::ChangeWorld()

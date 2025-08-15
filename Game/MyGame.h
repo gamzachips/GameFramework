@@ -3,7 +3,6 @@
 class MyGame : public Game
 {
 public:
-	MyGame();
-	virtual ~MyGame();
+	virtual void Init() override;
 };
 

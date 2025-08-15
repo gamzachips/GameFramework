@@ -7,9 +7,9 @@ class Renderer
 {
 	friend class Game;
 	friend class ResourceManager;
+	friend class SpriteRenderer;
 private:
-	void Init(HWND _hwnd);
-
+	void Init();
 	void DrawTexture(TextureHandle _handle, Vector2 _pos, float _scale = 1.f);
 	
 	const ComPtr<ID2D1RenderTarget> GetRenderTarget() const { return renderTarget; }

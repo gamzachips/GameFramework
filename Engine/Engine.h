@@ -5,12 +5,11 @@
 
 class Game;
 
-extern Game* GGame;
-
 class Engine
 {
 public:
-	bool Initialize(const WindowDesc& _desc, std::unique_ptr<Game> _game);
+	bool Initialize(const WindowDesc& _desc);
+	void SetGame(std::unique_ptr<Game> _game);
 	void Run();
 	int ShutDown();
 

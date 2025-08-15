@@ -18,6 +18,7 @@
 #include <dwrite.h>
 #include <wincodec.h>
 #include <wrl/client.h>
+#pragma comment(lib, "d2d1.lib")
 
 #include "Types.h"
 

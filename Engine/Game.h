@@ -9,9 +9,11 @@ class InputManager;
 class ResourceManager;
 class Renderer;
 
+
 class Game
 {
 	friend class Core;
+	friend class Engine;
 public:
 	Game();
 	virtual ~Game();
@@ -20,18 +22,17 @@ public:
 	void SetWorld(std::string _name);
 	void DontDestroyOnLoad(Object* _object);
 
-	const TimeManager* GetTimeManager() const { return timeManager.get(); }
-	const InputManager* GetInputManager() const { return inputManager.get(); }
-	const ResourceManager* GetResourceManager() const { return resourceManager.get(); }
-	const Renderer* GetRenderer() const { return renderer.get(); }
+	TimeManager* GetTimeManager() { return timeManager.get(); }
+	InputManager* GetInputManager() { return inputManager.get(); }
+	ResourceManager* GetResourceManager() { return resourceManager.get(); }
+	Renderer* GetRenderer() { return renderer.get(); }
 
 private:
-	void Init();
+	virtual void Init();
 	void Update();
 	void Render();
 
 	void ChangeWorld();
-
 private:
 	std::unordered_map<std::string, std::unique_ptr<World>> worlds;
 	std::unique_ptr<World> persistentWorld = nullptr;

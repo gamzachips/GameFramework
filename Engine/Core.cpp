@@ -2,9 +2,10 @@
 #include "Core.h"
 
 
-void Core::Initialize(std::unique_ptr<Game> _game)
+void Core::Initialize(Game* _game)
 {
-	game = std::move(_game);
+	game = _game;
+	game->Init();
 }
 
 void Core::Update()

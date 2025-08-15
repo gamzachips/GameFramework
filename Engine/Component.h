@@ -14,7 +14,7 @@ public:
 	virtual void OnDisable();
 	virtual void OnDestroy();
 
-private:
+protected:
 	bool enabled = true;
 	Object* gameObject = nullptr;
 };

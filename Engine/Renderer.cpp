@@ -3,14 +3,15 @@
 #include "Handle.h"
 #include "Engine.h"
 #include "ResourceManager.h"
+#include "Window.h"
 
-void Renderer::Init(HWND _hwnd)
+void Renderer::Init()
 {
     //Create Factory
 	HR(D2D1CreateFactory(D2D1_FACTORY_TYPE_MULTI_THREADED, factory.GetAddressOf()));
 
     RECT rc;
-    GetClientRect(_hwnd, &rc);
+    GetClientRect(Window::GetHWND(), &rc);
 
     D2D1_SIZE_U size = D2D1::SizeU(
         rc.right - rc.left,
@@ -20,7 +21,7 @@ void Renderer::Init(HWND _hwnd)
     //Create RenderTarget
     HR(factory->CreateHwndRenderTarget(
         D2D1::RenderTargetProperties(),
-        D2D1::HwndRenderTargetProperties(_hwnd, size),
+        D2D1::HwndRenderTargetProperties(Window::GetHWND(), size),
         &renderTarget
     ));
 
@@ -28,7 +29,7 @@ void Renderer::Init(HWND _hwnd)
 
 void Renderer::DrawTexture(TextureHandle _handle, Vector2 _pos, float _scale)
 {
-    Texture* texture = GGame->GetResourceManager()->GetTexture(_handle);
+    Texture* texture = Engine::GGame->GetResourceManager()->GetTexture(_handle);
 
     D2D1_POINT_2F dpiPos;
     float dpiX, dpiY;

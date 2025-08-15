@@ -27,6 +27,7 @@ public:
 	int Initialize();
 	bool Update();
 	int Destroy();
+	static HWND GetHWND() { return hWnd; }
 
 private:
 	ATOM MyRegisterClass(HINSTANCE _hInstance);
@@ -40,5 +41,6 @@ private:
 	HICON hIconSmall;
 	int cmdShow;
 	MSG msg;
+	static HWND hWnd;
 };
 

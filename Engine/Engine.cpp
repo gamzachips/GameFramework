@@ -2,19 +2,21 @@
 #include "Engine.h"
 #include "Game.h"
 
-Game* GGame = nullptr;
+std::unique_ptr<Game> Engine::GGame = nullptr;
 
-bool Engine::Initialize(const WindowDesc& _desc, std::unique_ptr<Game> _game)
+bool Engine::Initialize(const WindowDesc& _desc)
 {
 	window = std::make_unique<Window>(_desc);
 	core = std::make_unique<Core>();
 	if (!window->Initialize())
 		return false;
-	core->Initialize(std::move(_game));
-
-	GGame = _game.get();
-
 	return true;
+}
+
+void Engine::SetGame(std::unique_ptr<Game> _game)
+{
+	GGame = std::move(_game);
+	core->Initialize(GGame.get());
 }
 
 void Engine::Run()
@@ -25,6 +27,8 @@ void Engine::Run()
 		if (!window->Update())
 			break;
 
+		core->Update();
+		core->Render();
 
 	}
 }

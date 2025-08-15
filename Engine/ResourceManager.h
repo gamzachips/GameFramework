@@ -31,7 +31,6 @@ private: //for Game
 private:
 	std::string NormalizePath(std::string _path);
 	ComPtr<ID2D1Bitmap> LoadBitmapFromFile(const std::wstring&);
-
 	
 private:
 	std::vector<std::unique_ptr<Texture>> textureSlots;
