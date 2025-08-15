@@ -104,7 +104,7 @@ ComPtr<ID2D1Bitmap> ResourceManager::LoadBitmapFromFile(const std::wstring& _fil
 		WICBitmapDitherTypeNone, nullptr, 0.f,
 		WICBitmapPaletteTypeCustom));
 
-	ComPtr<ID2D1RenderTarget> rt = Engine::GGame->GetRenderer()->GetRenderTarget();
+	ComPtr<ID2D1RenderTarget> rt = Engine::GetRenderer()->GetRenderTarget();
 
 	ComPtr<ID2D1Bitmap> bitmap;
 	HR(rt->CreateBitmapFromWicBitmap(converter.Get(), nullptr, bitmap.GetAddressOf()));

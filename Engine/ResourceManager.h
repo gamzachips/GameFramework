@@ -14,7 +14,7 @@ concept ResourceType = std::is_base_of_v<Resource, T>;
 
 class ResourceManager
 {
-	friend class Game;
+	friend class Engine;
 	friend class Renderer;
 public:
 	TextureHandle GetOrLoadTexture(const std::wstring& _path);

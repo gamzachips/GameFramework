@@ -56,9 +56,6 @@
     <ClInclude Include="Window.h">
       <Filter>소스 파일\2.Window</Filter>
     </ClInclude>
-    <ClInclude Include="Core.h">
-      <Filter>소스 파일\1.Core</Filter>
-    </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>소스 파일\99.Headers</Filter>
     </ClInclude>
@@ -114,9 +111,6 @@
     </ClCompile>
     <ClCompile Include="Window.cpp">
       <Filter>소스 파일\2.Window</Filter>
-    </ClCompile>
-    <ClCompile Include="Core.cpp">
-      <Filter>소스 파일\1.Core</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>소스 파일\99.Headers</Filter>

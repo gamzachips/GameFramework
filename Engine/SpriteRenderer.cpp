@@ -4,12 +4,13 @@
 #include "ResourceManager.h"
 #include "Renderer.h"
 
+
 void SpriteRenderer::Render()
 {
-	Engine::GGame->GetRenderer()->DrawTexture(texture, Vector2(0, 0));
+	Engine::GetRenderer()->DrawTexture(texture, Vector2(0, 0));
 }
 
 void SpriteRenderer::SetTexture(const std::wstring& path)
 {
-	texture = Engine::GGame->GetResourceManager()->GetOrLoadTexture(path);
+	texture = Engine::GetResourceManager()->GetOrLoadTexture(path);
 }

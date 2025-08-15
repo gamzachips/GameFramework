@@ -1,21 +1,11 @@
 #include "pch.h"
 #include "Game.h"
-#include "TimeManager.h"
-#include "InputManager.h"
-#include "ResourceManager.h"
-#include "Renderer.h"
+
 
 Game::Game()
 {
 	persistentWorld = std::make_unique<World>();
-	timeManager = std::make_unique<TimeManager>();
-	inputManager = std::make_unique<InputManager>();
-	resourceManager = std::make_unique<ResourceManager>();
-	renderer = std::make_unique<Renderer>();
 
-	timeManager->Init();
-	resourceManager->Init();
-	renderer->Init();
 }
 
 Game::~Game()
@@ -48,8 +38,6 @@ void Game::Init()
 
 void Game::Update()
 {
-	timeManager->Update();
-	inputManager->Update();
 
 	if (nowWorld)
 		nowWorld->Update();
@@ -61,11 +49,9 @@ void Game::Update()
 
 void Game::Render()
 {
-	renderer->GetRenderTarget().Get()->BeginDraw();
 	if (nowWorld)
 		nowWorld->Render();
 	persistentWorld->Render();
-	renderer->GetRenderTarget().Get()->EndDraw();
 
 }
 

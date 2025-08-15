@@ -1,7 +1,7 @@
 #include "MyGame.h"
 #include "SpriteRenderer.h"
 
-void MyGame::Init()
+MyGame::MyGame()
 {
 	World* testWorld = CreateWorld("Test");
 	SetWorld("Test");
@@ -9,4 +9,8 @@ void MyGame::Init()
 	Object* obj = testWorld->CreateObject();
 	SpriteRenderer* sr = obj->AddComponent<SpriteRenderer>();
 	sr->SetTexture(L"lofi.png");
+}
+
+MyGame::~MyGame()
+{
 }

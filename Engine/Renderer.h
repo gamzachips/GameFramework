@@ -5,7 +5,7 @@ struct TextureHandle;
 
 class Renderer
 {
-	friend class Game;
+	friend class Engine;
 	friend class ResourceManager;
 	friend class SpriteRenderer;
 private:

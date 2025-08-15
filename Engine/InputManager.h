@@ -10,7 +10,7 @@ enum class InputType
 
 class InputManager
 {
-	friend class Game;
+	friend class Engine;
 
 public:
 	InputType GetKey(int key);

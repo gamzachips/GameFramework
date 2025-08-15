@@ -23,7 +23,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     if (!engine.Initialize(desc))
         return -1;
 
-    engine.SetGame(std::move(std::make_unique<MyGame>()));
+    engine.StartGame<MyGame>();
 
     engine.Run();
 

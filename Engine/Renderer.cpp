@@ -29,7 +29,7 @@ void Renderer::Init()
 
 void Renderer::DrawTexture(TextureHandle _handle, Vector2 _pos, float _scale)
 {
-    Texture* texture = Engine::GGame->GetResourceManager()->GetTexture(_handle);
+    Texture* texture = Engine::GetResourceManager()->GetTexture(_handle);
 
     D2D1_POINT_2F dpiPos;
     float dpiX, dpiY;

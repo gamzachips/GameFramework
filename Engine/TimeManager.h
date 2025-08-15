@@ -1,7 +1,7 @@
 #pragma once
 class TimeManager
 {
-	friend class Game;
+	friend class Engine;
 public:
 	float GetDeltaTime() const { return deltaTime; }
 
