@@ -44,11 +44,11 @@ TextureHandle ResourceManager::GetOrLoadTexture(const std::wstring& _path)
 	return handle;
 }
 
-bool ResourceManager::IsValid(const TextureHandle handle)
+bool ResourceManager::IsValid(const TextureHandle _handle) const
 {
-	if (handle.index >= textureSlots.size())
+	if (_handle.index >= textureSlots.size())
 		return false;
-	if (handle.gen != textureSlotGens[handle.index])
+	if (_handle.gen != textureSlotGens[_handle.index])
 		return false;
 	return true;
 }
@@ -60,11 +60,24 @@ void ResourceManager::Init()
 
 }
 
-Texture* ResourceManager::GetTexture(TextureHandle _handle)
+void ResourceManager::GarbageCollect(uint64_t _maxUnusedFrames)
+{
+	//현재 프레임 currFrame
+	//텍스처 슬롯을 돌면서 lastUsedFrame 체크 
+	//프레임 차이가 maxUnusedFrames 보다 크면 Unload 호출 
+}
+
+Texture* ResourceManager::GetTexture(TextureHandle _handle) const
 {
 	if (IsValid(_handle))
 		return textureSlots[_handle.index].get();
 	return nullptr;
+}
+
+void ResourceManager::Unload(TextureHandle _handle)
+{
+	//_handle.index번쨰 슬롯 원소를 제거. 
+	//unordered_map에서 핸들 찾아서 그 원소 제거
 }
 
 std::string ResourceManager::NormalizePath(std::string _path)
@@ -98,4 +111,3 @@ ComPtr<ID2D1Bitmap> ResourceManager::LoadBitmapFromFile(const std::wstring& _fil
 
 	return bitmap;
 }
-

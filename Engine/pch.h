@@ -19,6 +19,7 @@
 #include <wincodec.h>
 #include <wrl/client.h>
 
+#include "Types.h"
 
 #define HR(x)		\
 {					\

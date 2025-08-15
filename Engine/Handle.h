@@ -1,11 +1,5 @@
 #pragma once
 
-struct Handle
-{
-	unsigned int index;
-	unsigned int gen;
-};
-
 struct TextureHandle
 {
 	unsigned int index;

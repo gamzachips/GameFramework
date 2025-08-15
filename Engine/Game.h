@@ -22,6 +22,7 @@ public:
 
 	const TimeManager* GetTimeManager() const { return timeManager.get(); }
 	const InputManager* GetInputManager() const { return inputManager.get(); }
+	const ResourceManager* GetResourceManager() const { return resourceManager.get(); }
 	const Renderer* GetRenderer() const { return renderer.get(); }
 
 private:

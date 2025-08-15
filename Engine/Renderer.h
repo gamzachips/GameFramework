@@ -1,19 +1,20 @@
 #pragma once
 #include <string>
 
+struct TextureHandle;
+
 class Renderer
 {
 	friend class Game;
 	friend class ResourceManager;
 private:
-	void Init();
+	void Init(HWND _hwnd);
 
-	//void DrawBitmap(TextureHandle handle);
-	//void DrawtextString(std::string text);
+	void DrawTexture(TextureHandle _handle, Vector2 _pos, float _scale = 1.f);
 	
 	const ComPtr<ID2D1RenderTarget> GetRenderTarget() const { return renderTarget; }
 private:
 	ComPtr<ID2D1Factory1> factory;
-	ComPtr<ID2D1RenderTarget> renderTarget;
+	ComPtr<ID2D1HwndRenderTarget> renderTarget;
 };
 

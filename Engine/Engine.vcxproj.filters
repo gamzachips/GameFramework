@@ -101,6 +101,12 @@
     <ClInclude Include="Handle.h">
       <Filter>소스 파일\1.Core\Resource</Filter>
     </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>소스 파일\99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteRenderer.h">
+      <Filter>소스 파일\1.Core\Component</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -150,6 +156,9 @@
     </ClCompile>
     <ClCompile Include="Handle.cpp">
       <Filter>소스 파일\1.Core\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteRenderer.cpp">
+      <Filter>소스 파일\1.Core\Component</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
